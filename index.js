@@ -16,8 +16,8 @@ console.log(countEl);
 let count = 0
 
 function increment () {
-  count = count + 1
-  countEl.innerText = count
+  count += 1
+  countEl.textContent = count
   console.log("count")
   
 }
@@ -25,11 +25,7 @@ function increment () {
 
 // create a function save(), which logs out the count when it's called
 
-function save() {
-console.log("count")
-}
 
-save()
 
 
 
@@ -38,10 +34,10 @@ let notifications = "you have three new notifications"
 console.log(notifications)
 
 
-let messageToUser = "You have a test next week"
+let messageToUser = "You have a test next week "
 let username = "John"
 
-console.log(messageToUser + ", " + username + "!")
+console.log(messageToUser  + username + "!")
 
 
 
@@ -50,3 +46,22 @@ let greeting = "Hi, my name is "
 
 let mygreeting =  greeting + name
  console.log(mygreeting)
+ 
+
+
+
+
+
+ let saveEl = document.getElementById("save-el");
+ 
+ 
+
+ 
+ function save() {
+    let countstr = count + " - "
+   saveEl.textContent += countstr
+  countEl.textContent = 0
+  count = 0
+   
+ }
+ 
